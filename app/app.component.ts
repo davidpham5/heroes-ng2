@@ -1,43 +1,23 @@
 import { Component } from '@angular/core';
+import { Hero } from './hero/hero';
 
-export class Hero {
-	id: number;
-	name: string;
-}
-
+// Mock
 const HEROES: Hero[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
+  { id: 11, name: 'Needle Man' },
+  { id: 12, name: 'Magnet Man' },
+  { id: 13, name: 'Gemini Man' },
+  { id: 14, name: 'Hard Man' },
+  { id: 15, name: 'Top Man' },
   { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
+  { id: 17, name: 'Snake Man' },
+  { id: 18, name: 'Spark Man' },
+  { id: 19, name: 'Shadow Man' },
+  { id: 20, name: 'Mega Man' }
 ]
 
-
 @Component({
-  selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>
-	<h2>{{title}}</h2>
-	<div *ngIf="selectedHero">
-		<h2>{{selectedHero.name}} details!</h2>
-		<div><label>id: </label>{{selectedHero.id}}</div>
-		<div>
-		    <label>name: </label>
-		    <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-		</div>
-	</div>
-	<h2>My Heroes</h2>
-	<ul class="heroes">
-		<li *ngFor="let hero of heroes" (click)="onSelect(hero)">
-			<span class="badge">{{hero.id}}</span> {{hero.name}}
-		</li>
-	</ul>
-  `,
+	selector: 'my-app',
+ 	templateUrl: 'app/hero/heroes.html',
 	styles: [`
 	  .selected {
 		background-color: #CFD8DC !important;
@@ -93,12 +73,13 @@ export class AppComponent  {
 	name = 'David';
 	title = 'Tour of Heroes';
 	heroes = HEROES;
-	selectedHero: Hero;
 	onSelect(hero: Hero): void {
+		// on click, select hero
+		// this -> appComponent object
+		// assign selectHero to hero
+		// onSelect is private function
 		this.selectedHero = hero;
+		console.log(this);
 	};
-	hero: Hero = {
-		id: 1,
-		name: 'Windstorm'
-	};
+	selectedHero: Hero;
 }

@@ -1,5 +1,10 @@
+body {
+	font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
+	margin: 0 auto;
+	width: 75%;
+}
+
 h1 {
   color: #369;
-  font-family:  Helvetica, sans-serif;
   font-size: 250%;
 }
