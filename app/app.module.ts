@@ -11,23 +11,23 @@ import { HeroService } from './hero/hero.service';
 
 @NgModule({
 	imports: [
-			BrowserModule,
-			FormsModule,
-			RouterModule.forRoot([
-				{
-				  path: 'dashboard',
-				  component: DashboardComponent
-				},
-				{
-					path: 'heroes',
-					component: HeroesComponent
-				},
-				{
-				  path: '',
-				  redirectTo: '/dashboard',
-				  pathMatch: 'full'
-				},
-			])
+		BrowserModule,
+		FormsModule,
+		RouterModule.forRoot([
+			{
+			  path: 'dashboard',
+			  component: DashboardComponent
+			},
+			{
+				path: 'heroes',
+				component: HeroesComponent
+			},
+			{
+			  path: '',
+			  redirectTo: '/dashboard',
+			  pathMatch: 'full'
+			},
+		])
 	],
 	declarations: [
 	  AppComponent,
