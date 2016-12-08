@@ -16,7 +16,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n\t    <h1>{{title}}</h1>\n\t    <my-heroes></my-heroes>\n\t"
+            template: "\n        <div class=\"row\">\n            <div class=\"large-6 column\">\n                <nav>\n                     <a routerLink=\"/dashboard\">Dashboard</a>\n                     <a routerLink=\"/heroes\">Heroes</a>\n                 </nav>\n              <router-outlet></router-outlet>\n            </div>\n        </div>\n\t",
+            styles: ["\n        nav {\n            margin-top: 15px;\n            margin-bottom: 15px;\n        }\n        nav a {\n            padding: 6px 12px;\n            margin-right: 15px;\n            background-color: #eaeaea;\n            border-radius: 4px;\n        }\n    "]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
